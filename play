@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#check if file dictionary.hs exists. If not, create the haskell word table
+if [[ ! -e Dictionary.hs ]]; then
+    ./separateWords dictionary.txt > Dictionary.hs
+fi
+
+runhaskell Main
+

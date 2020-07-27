@@ -1,0 +1,17 @@
+#!/usr/bin/awk -f
+
+BEGIN {
+  counter=0
+  printf "module Dictionary where\n\n";
+  printf "dictionary = ["
+}
+{
+  printf "%s\"%s\"", com, $1;
+  com=","
+  counter++
+}
+END {
+i
+ print "] :: [String]"
+ printf "\nlen = %d :: Int", counter;
+}
