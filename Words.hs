@@ -7,7 +7,7 @@ import Dictionary
 
 --Produces a random number from 1 to n-1
 randNumber :: (RandomGen g) => Int -> Rand g Int
-randNumber n= getRandomR (0,n-1)
+randNumber n = getRandomR (0,n-1)
 
 --reads the dictionary and yields a random element from it
 readTextFile :: IO String

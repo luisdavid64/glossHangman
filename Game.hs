@@ -14,12 +14,6 @@ data GameState = Running | Win | Lose deriving (Eq,Show)
 -- Data type that stores all the relevant information of the game
 data Game = Game {man :: Man, answer :: Answer, gameState :: GameState, word :: String} deriving (Eq,Show)
 
-initialGame = Game {  man = Head
-                    , answer = Answer "duck"
-                    , gameState = Running
-                    , word = "duck"}
-
-
 --Advances the state of the man if there was a letter miss
 nextPart :: Man -> Man
 nextPart x = if (x < End) then succ x else End

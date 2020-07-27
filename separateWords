@@ -1,5 +1,6 @@
 #!/usr/bin/awk -f
 
+#This program parses dictionary.txt to make a [String] dictionary to use in the game
 BEGIN {
   counter=0
   printf "module Dictionary where\n\n";
@@ -11,7 +12,6 @@ BEGIN {
   counter++
 }
 END {
-i
  print "] :: [String]"
  printf "\nlen = %d :: Int", counter;
 }
